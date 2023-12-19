@@ -28,13 +28,29 @@
                         <div class="mb-4">
                             <label for="websiteName" class="form-label fw-bold">Website Name</label>
                             <input type="text" class="form-control" id="websiteName" placeholder="Name">
+                            <div class="text-danger mt-1 d-none" id="websiteNameValidation">
+                                <small>Website name must be:</small>
+                                <ul>
+                                    <li><small>At least 3 characters long</small></li>
+                                    <li><small>Less than 40 characters</small></li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="mb-5">
                             <label for="websiteUrl" class="form-label fw-bold">Website Link</label>
                             <input type="text" class="form-control" id="websiteUrl" placeholder="Link">
+                            <div class="text-danger mt-1 d-none" id="websiteUrlValidation">
+                                <small>Website link must be:</small>
+                                <ul>
+                                    <li><small>Starting with at least 1 letter</small></li>
+                                    <li><small>Ending with .com</small></li>
+                                    <li><small>Does not include https:// or any other protocols</small></li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="btns">
-                            <button id="addWebsiteBtn" class="btn btn-success" onclick="createBookmark()" disabled>Add website</button> 
+                            <button id="addWebsiteBtn" class="btn btn-success" onclick="createBookmark()" disabled>Add
+                                website</button>
                             <a class="btn btn-info" href="index.html">Back to list</a>
                         </div>
                     </div>
