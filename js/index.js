@@ -5,16 +5,7 @@ var noDataUI = document.getElementById('noDataUI');
 var LOCAL_STORAGE_KEY = 'bookmarks';
 
 var websites = getFromLocalStorage();
-// var websites = [
-//     {
-//         "name": "hello",
-//         "url": "google.com"
-//     },
-//     {
-//         "name": "hello 2",
-//         "url": "google.com2"
-//     }
-// ]
+
 updateHomePage(websites);
 
 
@@ -33,6 +24,7 @@ function updateHomePage(_websites)
     tableData.classList.replace('d-none', 'd-table');
 }
 
+// Update tbody with a given list of Websites objects
 function updateTable(_websites)
 {
     var literalTemplate = ``;
@@ -42,9 +34,9 @@ function updateTable(_websites)
         <tr>
         <td>${i}</td>
         <td>${_websites[i].name}</td>
-        <td><a class="btn btn-sm btn-warning" href="${_websites[i].url}">Visit website</a></td>
+        <td><a class="btn btn-sm btn-warning" href="https://${_websites[i].url}">Visit website</a></td>
         <td>
-          <button class="btn btn-sm btn-danger">Delete</button>
+          <button class="btn btn-sm btn-danger" onclick="deleteWebsite(${i})">Delete</button>
         </td>
       </tr>
         `;
@@ -52,6 +44,13 @@ function updateTable(_websites)
     tableBody.innerHTML = literalTemplate;
 }
 
+
+function deleteWebsite(idx)
+{
+    websites.splice(idx, 1);
+    updateTable(websites);
+    updateLocalStorage();
+}
 
 function updateLocalStorage()
 {
