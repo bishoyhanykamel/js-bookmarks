@@ -1,17 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/all.min.css">
+    <title>Bookmarker</title>
+    <link rel="stylesheet" href="./css/all.min.css" />
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
-</head>
-<body>
-    
+  </head>
+  <body>
+    <main>
+      <section id="header" class="">
+        <div class="container section">
+          <div class="row">
+            <div
+              class="col-12 d-flex align-items-center justify-content-center"
+            >
+              <h1 class="pt-5 pb-3">Bookmarker</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="searchSection">
+        <div class="container">
+          <div class="row">
+            <div class="col-10">
+              <input
+                type="text"
+                name="searchField"
+                id="searchInput"
+                class="form-control"
+                placeholder="Search by name"
+              />
+            </div>
+            <div class="col-2">
+              <a href="#" class="btn btn-success" class="form-control"
+                >Add new website</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tableSection">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <table class="table table-hover text-center">
+                <thead>
+                  <tr>
+                    <th>Index</th>
+                    <th>Website Name</th>
+                    <th>Visit Website</th>
+                    <th>Delete</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>0</td>
+                    <td>Lorem ipsum dolor sit.</td>
+                    <td><a class="btn btn-sm btn-warning">Visit website</a></td>
+                    <td>
+                      <button class="btn btn-sm btn-danger">Delete</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/script.js"></script>
-</body>
+  </body>
 </html>
