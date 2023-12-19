@@ -25,7 +25,7 @@
       <section id="searchSection">
         <div class="container">
           <div class="row">
-            <div class="col-10">
+            <div class="col-md-10">
               <input
                 type="text"
                 name="searchField"
@@ -34,7 +34,7 @@
                 placeholder="Search by name"
               />
             </div>
-            <div class="col-2">
+            <div class="col-md-2">
               <a href="#" class="btn btn-success" class="form-control"
                 >Add new website</a
               >
@@ -46,8 +46,11 @@
       <section id="tableSection">
         <div class="container">
           <div class="row">
-            <div class="col-12">
-              <table class="table table-hover text-center">
+            <div class="col">
+              <table
+                class="table table-hover text-center d-none"
+                id="tableData"
+              >
                 <thead>
                   <tr>
                     <th>Index</th>
@@ -56,17 +59,16 @@
                     <th>Delete</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <td>0</td>
-                    <td>Lorem ipsum dolor sit.</td>
-                    <td><a class="btn btn-sm btn-warning">Visit website</a></td>
-                    <td>
-                      <button class="btn btn-sm btn-danger">Delete</button>
-                    </td>
-                  </tr>
+                <tbody id="tableBody">
                 </tbody>
               </table>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+                <div id="noDataUI" class="alert bg-warning bg-opacity-25 d-none">
+                    <h3>No data found</h3>
+                  </div>
             </div>
           </div>
         </div>
