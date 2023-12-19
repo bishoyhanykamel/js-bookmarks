@@ -14,9 +14,10 @@ updateHomePage(websites);
 function updateHomePage(_websites) 
 {
     // No bookmarks found -> display no data found UI and exit function
-    if (_websites === null)
+    if (_websites === null || _websites.length <= 0)
     {
         noDataUI.classList.replace('d-none', 'd-block');
+        tableData.classList.replace('d-table', 'd-none');
         return;
     }
 
@@ -48,7 +49,7 @@ function updateTable(_websites)
 function deleteWebsite(idx)
 {
     websites.splice(idx, 1);
-    updateTable(websites);
+    updateHomePage(websites);
     updateLocalStorage();
 }
 
